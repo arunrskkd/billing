@@ -1,0 +1,19 @@
+{
+  "name": "test",
+  "description": "",
+  "main": "index.js",
+  "license": "BSD-2-Clause",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+    
+  }
+}

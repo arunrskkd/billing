@@ -1,0 +1,86 @@
+/* ...........................mixins..........................*/
+/* button*/
+.butn{
+	color: #fff;
+	background: #85994b;
+	font-size: 20px;
+	box-shadow:0 2px 0 #000000;
+	transition:.5s;
+	border: 0;
+	&:focus{
+		outline: #2B8CC4;
+		 
+	}
+	&:hover{
+		background-color:#006435;
+		transition:.5s;
+	}
+}
+/* link*/
+.link{
+	font-size: 19px;
+	color: #005EA5;
+	text-decoration:underline;
+	&:hover{
+			color: #2B8CC4;
+		}
+
+	}
+.heading{
+		color: #000;
+	font-weight: bold;
+}
+.heading-xlarge{
+	.heading;
+	font-size: 48px ;
+}
+.heading-large{
+	.heading;
+	font-size: 36px ;
+}
+.heading-medium{
+	.heading;
+	font-size: 24px ;
+}
+.heading-small{
+	.heading;
+	font-size: 19px ;
+}
+.lead-para{
+	font-size: 24px;
+	color:#000000;
+	line-height:1.25;
+}
+.normal-para{
+	font-size: 19px;
+	color:#000000;
+	line-height:inherit;
+}
+.support-para{
+	font-size: 16px;
+	color:#000000;
+	line-height:1.25;
+}
+
+/*........................ mixin ends...........................*/
+.buttonone{
+	width: 200px;
+	.butn;
+	
+}
+.buttontwo{
+		width: 50px;
+	.butn;
+}
+.headone{
+	.heading-xlarge;
+}
+.headtwo{
+	.heading-large;
+}
+.headthree{
+	.heading-medium;
+}
+.headfour{
+	.heading-small;
+}
