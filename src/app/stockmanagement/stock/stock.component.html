@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row mt-3">
+            <div class="col-sm-12">
+            <h4 >Stock   </h4>
+            </div>
+    </div>
+</div>
+
+<div class="container-fluid" >
+    <div class="row mt-3">
+        <div class="col-sm-12">
+                <p-dialog header="window" [(visible)]="display" modal="modal" [responsive]="true" [width]="800" [minWidth]="800" [minY]="70">
+                        <app-addstock></app-addstock> 
+                    </p-dialog>
+                    <p-dialog header="window" [(visible)]="displaytwo" modal="modal" [responsive]="true" [width]="800" [minWidth]="800" [minY]="70">
+                    <app-editstock></app-editstock>
+                    </p-dialog>
+                 
+                    <button class="btn btn-primary" type="text" (click)="showDialog()"  label="Show">Add Stock</button>
+            
+              
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-sm-12">
+            <app-viewstock  ></app-viewstock>  
+        </div>
+    </div>
+</div>
+

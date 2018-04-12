@@ -1,0 +1,22 @@
+<div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4">
+        
+        <h4 class="text-white">Collapsed content</h4>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button"  (click)="display = true" pButton>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </div>
+
+
+  <p-sidebar [(visible)]="display">
+      <span ><h3 class="py-4 logo">Company Logo</h3></span>
+      <p-panelMenu [model]="items" [style]="{'width':'100%'}"></p-panelMenu>
+  </p-sidebar>
+
+ 

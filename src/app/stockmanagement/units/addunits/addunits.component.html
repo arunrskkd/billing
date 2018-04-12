@@ -1,0 +1,22 @@
+<p-card title="Add Unit" >
+    <form [formGroup]="stockform" (ngSubmit)="onsubmit(stockform)">
+        <div class="row ">
+            <div class="col-sm-6  form-group">
+                <label for="">Name</label><br>
+                <input type="text"  class="form-control" formControlName="name">  
+            </div>
+          
+            <div class="col-sm-6  form-group">
+                <label for="">Description</label><br>
+                <input type="text"  class="form-control" formControlName="description">  
+            </div>
+            <div class="col-sm-6 form-group">
+                <button type="submit" class="btn btn-primary" [disabled]="!stockform.valid">Submit</button>
+            </div>
+            <div class="col-sm-6 form-group">
+                <button type="button" class="btn btn-info" (click)="stockform.reset()">Refresh</button>
+            </div>
+        </div>
+      </form>
+</p-card>
+

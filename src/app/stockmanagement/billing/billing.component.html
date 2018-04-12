@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-sm-12">
+      <p-card title="Add Item">
+        <div class="row">
+          <div class="col-sm-3">
+            <label for="">Item</label>
+            <select class="form-control" [(ngModel)]="item" (change)="onchange(item)">
+              <option *ngFor="let item of stock" [value]="item.name">{{item.name}}</option>
+
+            </select>
+          </div>
+          <div class="col-sm-3">
+            <label for="">cost</label>
+            <input type="text" class="form-control " [(ngModel)]="selecteditem.price"> per {{selecteditem.unit}}
+          </div>
+          <div class="col-sm-3">
+            <label for="">Quantity</label>
+            <input type="number" class="form-control" [(ngModel)]="quantity">Remaining quantity = {{selecteditem.quantity}} {{selecteditem.unit}}
+            <br>
+            <span *ngIf="selecteditem.quantity < quantity" [ngStyle]="{'color': 'red'}">Not enough stock</span>
+          </div>
+          <div class="col-sm-3">
+
+            <button class="btn btn-info mt-4" (click)="adddata()" [disabled]="selecteditem.quantity < quantity">
+              Add
+            </button>
+          </div>
+        </div>
+      </p-card>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-sm-12">
+      <p-card title="Bill">
+
+        <table class="table">
+          <tr>
+            <th>Item</th>
+            <th>no</th>
+            <th>Total price</th>
+            <th>Action</th>
+          </tr>
+          <tr *ngFor="let data of billingdata;let i = index">
+            <td>{{data.name}}</td>
+            <td>{{data.quantity}}</td>
+            <td>{{data.total}}</td>
+            <td (click)=del(i)>del</td>
+          </tr>
+
+        </table>
+        total = {{amount}}
+      </p-card>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-sm-12">
+      <button class="btn btn-primary" (click)="onsave()">Save</button>
+    </div>
+  </div>
+
+</div>

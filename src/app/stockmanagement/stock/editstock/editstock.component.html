@@ -1,0 +1,38 @@
+<p-card title="Edit Stock" >
+  <form [formGroup]="stockform" (ngSubmit)="onsubmit(stockform)">
+      <div class="row ">
+            <div class="col-sm-6  form-group" [hidden]="true">
+                    <label for="">id</label><br>
+                    <input type="text"  class="form-control" formControlName="id">  
+                </div>
+          <div class="col-sm-6  form-group">
+              <label for="">Name</label><br>
+              <input type="text"  class="form-control" formControlName="name">  
+          </div>
+          <div class="col-sm-6  form-group">
+              <label for="">Price/Unit</label><br>
+              <input type="number" class="form-control" formControlName="price">  
+          </div>
+          <div class="col-sm-6  form-group">
+              <label for="">Quantity</label><br>
+              <input type="number"  class="form-control" formControlName="quantity">  
+          </div>
+          <div class="col-sm-6  form-group">
+            <label for="">Unit</label><br>
+            <select class="form-control" formControlName="unit">
+                <option *ngFor="let unit of units" value="{{unit.name}}">{{unit.name}}</option>
+            </select>
+        </div>
+          <div class="col-sm-6  form-group">
+              <label for="">Description</label><br>
+              <input type="text"  class="form-control" formControlName="description">  
+          </div>
+          <div class="col-sm-6 form-group">
+              <button type="submit" class="btn btn-primary" [disabled]="!stockform.valid">Update</button>
+          </div>
+         
+
+        
+      </div>
+    </form>
+</p-card>
